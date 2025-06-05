@@ -2,6 +2,7 @@
 :root {
     /* 主题颜色 */
     --primary-color: #00a4ff;
+    --primary-color-dark: #0084cc; /* 添加深色版本 */
     --secondary-color: #ff7c2d;
     --text-color: #333;
     --text-light: #666;
@@ -376,7 +377,7 @@ ul, li {
 }
 
 #continue-learning:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: var(--primary-color-dark);
     opacity: 0.9;
 }
 
