@@ -1,0 +1,585 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #333;
+    background-color: #f3f5f7;
+}
+
+a {
+    text-decoration: none;
+    color: #050505;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部区域 */
+.header {
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header .wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    margin-right: 70px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav li {
+    margin-right: 25px;
+}
+
+.nav a {
+    font-size: 16px;
+    padding: 0 8px;
+    line-height: 100px;
+}
+
+.nav a.active, .nav a:hover {
+    color: #00a4ff;
+    border-bottom: 2px solid #00a4ff;
+}
+
+.search {
+    margin-left: auto;
+    display: flex;
+}
+
+.search input {
+    width: 360px;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #00a4ff;
+    border-right: none;
+    font-size: 14px;
+    color: #bfbfbf;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+.search button {
+    width: 50px;
+    height: 40px;
+    background-color: #00a4ff;
+    color: #fff;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.user-info {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* 轮播图区域 */
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+    position: relative;
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 100%;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-btns {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-btns span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-btns span.active {
+    background-color: #00a4ff;
+}
+
+/* 左侧导航栏 */
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 190px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+}
+
+.sidebar ul {
+    padding: 5px 0;
+}
+
+.sidebar li {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.sidebar li a {
+    color: #fff;
+    font-size: 14px;
+    display: block;
+}
+
+.sidebar li:hover {
+    background-color: #00a4ff;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 190px;
+    width: 800px;
+    height: 420px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 999;
+}
+
+.sidebar li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu dl {
+    float: left;
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.sub-menu dt {
+    color: #00a4ff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sub-menu dd {
+    height: 30px;
+    line-height: 30px;
+}
+
+.sub-menu dd a {
+    color: #666;
+    font-size: 14px;
+}
+
+.sub-menu dd a:hover {
+    color: #00a4ff;
+}
+
+/* 右侧课程表 */
+.course-list {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.course-list h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.course-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.course-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.course-item p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.course-item span {
+    font-size: 12px;
+    color: #999;
+}
+
+#continue-learning {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #00a4ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* 内容区域 */
+.content {
+    padding: 20px 0;
+    background-color: #f3f5f7;
+}
+
+/* 我的兴趣 */
+.interest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 0 30px;
+}
+
+.interest ul {
+    display: flex;
+}
+
+.interest li {
+    margin: 0 15px;
+    font-size: 16px;
+    color: #666;
+}
+
+.interest li.active {
+    color: #00a4ff;
+    font-weight: bold;
+}
+
+.modify {
+    color: #00a4ff;
+    font-size: 14px;
+}
+
+/* 课程模块通用样式 */
+.section-header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+    color: #494949;
+    font-weight: normal;
+}
+
+.section-header .more {
+    margin-left: auto;
+    color: #999;
+    font-size: 14px;
+}
+
+.tab {
+    margin-left: 30px;
+}
+
+.tab a {
+    margin: 0 15px;
+    font-size: 16px;
+    color: #868686;
+}
+
+.tab a.active {
+    color: #00a4ff;
+}
+
+/* 精品推荐模块 */
+.recommend {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.course-box {
+    width: 20%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.course-box.hot::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 40px;
+    height: 24px;
+    background: url(../images/hot.png) no-repeat;
+    z-index: 1;
+}
+
+.course-box img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.course-box h4 {
+    font-size: 14px;
+    color: #050505;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: normal;
+}
+
+.course-box p {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.level {
+    color: #ff7c2d;
+}
+
+/* 编程入门模块和数据分析师模块 */
+.programming, .data-analysis {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+.course-layout {
+    display: flex;
+}
+
+.left-banner {
+    width: 228px;
+    height: 392px;
+    margin-right: 15px;
+}
+
+.left-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-content {
+    flex: 1;
+}
+
+.top-banner {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.top-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.course-row .course-box {
+    width: 20%;
+    padding: 0 10px;
+}
+
+/* 页脚区域 */
+.footer {
+    background-color: #fff;
+    padding: 30px 0;
+    margin-top: 30px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left {
+    width: 440px;
+}
+
+.footer-left img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.footer-right {
+    display: flex;
+}
+
+.footer-right dl {
+    margin: 0 50px;
+}
+
+.footer-right dt {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-right dd {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .course-box {
+        width: 25%;
+    }
+    
+    .course-row .course-box {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .sidebar {
+        display: none;
+    }
+    
+    .course-list {
+        display: none;
+    }
+    
+    .course-box {
+        width: 33.333%;
+    }
+    
+    .course-row .course-box {
+        width: 33.333%;
+    }
+    
+    .left-banner {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+    
+    .search {
+        margin-left: 20px;
+    }
+    
+    .search input {
+        width: 200px;
+    }
+    
+    .course-box {
+        width: 50%;
+    }
+    
+    .course-row .course-box {
+        width: 50%;
+    }
+    
+    .footer .wrapper {
+        flex-direction: column;
+    }
+    
+    .footer-left {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

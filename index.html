@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学成在线网站</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="logo">
+                <img src="img/logo.png" alt="学成在线">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">课程规划</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="输入关键词">
+                <button>搜索</button>
+            </div>
+            <div class="user-info">
+                <img src="img/avatar.png" alt="用户头像">
+                <span>憨八嘎</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <div class="main">
+        <!-- 轮播图区域 -->
+        <div class="banner">
+            <div class="wrapper">
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="img/banner1.png" alt="banner1">
+                    </div>
+                    <div class="carousel-btns">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <!-- 左侧导航栏 -->
+                <div class="sidebar">
+                    <ul>
+                        <li>
+                            <a href="#">精品推荐</a>
+                            <div class="sub-menu">
+                                <dl>
+                                    <dt>前端开发</dt>
+                                    <dd><a href="#">HTML/CSS</a></dd>
+                                    <dd><a href="#">JavaScript</a></dd>
+                                    <dd><a href="#">Vue.js</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>后端开发</dt>
+                                    <dd><a href="#">Java</a></dd>
+                                    <dd><a href="#">Python</a></dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">编程入门</a>
+                            <div class="sub-menu">
+                                <dl>
+                                    <dt>基础课程</dt>
+                                    <dd><a href="#">编程思维</a></dd>
+                                    <dd><a href="#">C语言</a></dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">数据分析</a>
+                            <div class="sub-menu">
+                                <dl>
+                                    <dt>工具</dt>
+                                    <dd><a href="#">Excel</a></dd>
+                                    <dd><a href="#">SQL</a></dd>
+                                    <dd><a href="#">Python</a></dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="#">人工智能</a></li>
+                        <li><a href="#">前端开发</a></li>
+                        <li><a href="#">后端开发</a></li>
+                        <li><a href="#">移动开发</a></li>
+                        <li><a href="#">云计算&大数据</a></li>
+                        <li><a href="#">运维&测试</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 右侧课程表 -->
+                <div class="course-list">
+                    <h3>我的课程</h3>
+                    <div class="course-item">
+                        <img src="img/course1.png" alt="课程1">
+                        <p>Vue.js基础入门</p>
+                        <span>继续学习</span>
+                    </div>
+                    <div class="course-item">
+                        <img src="img/course2.png" alt="课程2">
+                        <p>Python数据分析</p>
+                        <span>继续学习</span>
+                    </div>
+                    <button id="continue-learning">继续学习</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content">
+            <div class="wrapper">
+                <!-- 我的兴趣 -->
+                <div class="interest">
+                    <ul>
+                        <li class="active">前端开发</li>
+                        <li>|</li>
+                        <li>后端开发</li>
+                        <li>|</li>
+                        <li>移动开发</li>
+                        <li>|</li>
+                        <li>数据分析</li>
+                        <li>|</li>
+                        <li>运维&测试</li>
+                    </ul>
+                    <a href="#" class="modify">修改兴趣</a>
+                </div>
+
+                <!-- 精品推荐模块 -->
+                <div class="recommend">
+                    <div class="section-header">
+                        <h2>精品推荐</h2>
+                        <a href="#" class="more">查看全部</a>
+                    </div>
+                    <div class="course-container">
+                        <div class="course-box hot">
+                            <img src="img/recommend1.png" alt="精品课程1">
+                            <h4>Think PHP 5.0 博客系统实战项目演练</h4>
+                            <p><span class="level">高级</span> · <span class="students">1125人正在学习</span></p>
+                        </div>
+                        <div class="course-box hot">
+                            <img src="img/recommend1.png" alt="精品课程2">
+                            <h4>Android 网络图片加载框架详解</h4>
+                            <p><span class="level">高级</span> · <span class="students">978人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/recommend1.png" alt="精品课程3">
+                            <h4>Angular 2 最新框架实战</h4>
+                            <p><span class="level">高级</span> · <span class="students">865人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/recommend1.png" alt="精品课程4">
+                            <h4>React Native入门与实战</h4>
+                            <p><span class="level">高级</span> · <span class="students">892人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/recommend1.png" alt="精品课程5">
+                            <h4>JAVA的运行机制详解</h4>
+                            <p><span class="level">高级</span> · <span class="students">1250人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/recommend1.png" alt="精品课程6">
+                            <h4>Sass/Less 预处理器入门</h4>
+                            <p><span class="level">高级</span> · <span class="students">756人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/recommend1.png" alt="精品课程7">
+                            <h4>Vue.js 实战项目开发</h4>
+                            <p><span class="level">高级</span> · <span class="students">1352人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/recommend1.png" alt="精品课程8">
+                            <h4>MySQL 数据库优化</h4>
+                            <p><span class="level">高级</span> · <span class="students">895人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/recommend1.png" alt="精品课程9">
+                            <h4>MongoDB 数据库入门</h4>
+                            <p><span class="level">高级</span> · <span class="students">685人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/recommend1.png" alt="精品课程10">
+                            <h4>Docker容器化部署实战</h4>
+                            <p><span class="level">高级</span> · <span class="students">932人正在学习</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 编程入门模块 -->
+                <div class="programming">
+                    <div class="section-header">
+                        <h2>编程入门</h2>
+                        <div class="tab">
+                            <a href="#" class="active">热门</a>
+                            <a href="#">初级</a>
+                            <a href="#">中级</a>
+                            <a href="#">高级</a>
+                        </div>
+                        <a href="#" class="more">查看全部</a>
+                    </div>
+                    <div class="course-layout">
+                        <div class="left-banner">
+                            <img src="img/left-banner.png" alt="编程入门">
+                        </div>
+                        <div class="right-content">
+                            <div class="top-banner">
+                                <img src="img/right-top-banner.png" alt="编程入门">
+                            </div>
+                            <div class="course-row">
+                                <div class="course-box">
+                                    <img src="img/programming1.png" alt="编程入门课程1">
+                                    <h4>Python入门课程</h4>
+                                    <p><span class="level">初级</span> · <span class="students">1258人正在学习</span></p>
+                                </div>
+                                <div class="course-box">
+                                    <img src="img/programming1.png" alt="编程入门课程2">
+                                    <h4>Java编程基础</h4>
+                                    <p><span class="level">初级</span> · <span class="students">945人正在学习</span></p>
+                                </div>
+                                <div class="course-box">
+                                    <img src="img/programming1.png" alt="编程入门课程3">
+                                    <h4>C语言入门</h4>
+                                    <p><span class="level">初级</span> · <span class="students">876人正在学习</span></p>
+                                </div>
+                                <div class="course-box">
+                                    <img src="img/programming1.png" alt="编程入门课程4">
+                                    <h4>HTML/CSS入门</h4>
+                                    <p><span class="level">初级</span> · <span class="students">1045人正在学习</span></p>
+                                </div>
+                                <div class="course-box">
+                                    <img src="img/programming1.png" alt="编程入门课程5">
+                                    <h4>JavaScript基础</h4>
+                                    <p><span class="level">初级</span> · <span class="students">958人正在学习</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 数据分析师模块 -->
+                <div class="data-analysis">
+                    <div class="section-header">
+                        <h2>数据分析师</h2>
+                        <div class="tab">
+                            <a href="#" class="active">热门</a>
+                            <a href="#">初级</a>
+                            <a href="#">中级</a>
+                            <a href="#">高级</a>
+                        </div>
+                        <a href="#" class="more">查看全部</a>
+                    </div>
+                    <div class="course-layout">
+                        <div class="left-banner">
+                            <img src="img/data-left.png" alt="数据分析">
+                        </div>
+                        <div class="right-content">
+                            <div class="top-banner">
+                                <img src="img/data-top.png" alt="数据分析">
+                            </div>
+                            <div class="course-row">
+                                <div class="course-box">
+                                    <img src="img/data1.png" alt="数据分析课程1">
+                                    <h4>Excel数据分析</h4>
+                                    <p><span class="level">初级</span> · <span class="students">825人正在学习</span></p>
+                                </div>
+                                <div class="course-box">
+                                    <img src="img/data2.png" alt="数据分析课程2">
+                                    <h4>SQL数据操作</h4>
+                                    <p><span class="level">中级</span> · <span class="students">754人正在学习</span></p>
+                                </div>
+                                <div class="course-box">
+                                    <img src="img/data3.png" alt="数据分析课程3">
+                                    <h4>Python数据分析</h4>
+                                    <p><span class="level">高级</span> · <span class="students">962人正在学习</span></p>
+                                </div>
+                                <div class="course-box">
+                                    <img src="img/data4.png" alt="数据分析课程4">
+                                    <h4>Power BI实战</h4>
+                                    <p><span class="level">高级</span> · <span class="students">658人正在学习</span></p>
+                                </div>
+                                <div class="course-box">
+                                    <img src="img/data5.png" alt="数据分析课程5">
+                                    <h4>Tableau可视化</h4>
+                                    <p><span class="level">高级</span> · <span class="students">725人正在学习</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚区域 -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-left">
+                <img src="img/logo.png" alt="学成在线">
+                <p>学成在线致力于普及中国最好的教育，让课程触手可及，让梦想触手可及！</p>
+                <p>© 2023年XTCX Inc.保留所有权利。 沪ICP备xxxx号</p>
+            </div>
+            <div class="footer-right">
+                <dl>
+                    <dt>关于我们</dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">联系我们</a></dd>
+                    <dd><a href="#">商务合作</a></dd>
+                </dl>
+                <dl>
+                    <dt>帮助中心</dt>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">意见反馈</a></dd>
+                    <dd><a href="#">服务条款</a></dd>
+                </dl>
+                <dl>
+                    <dt>学习资源</dt>
+                    <dd><a href="#">学习路径</a></dd>
+                    <dd><a href="#">课程资源</a></dd>
+                    <dd><a href="#">学习社区</a></dd>
+                </dl>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
