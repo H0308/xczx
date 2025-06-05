@@ -287,7 +287,7 @@ ul, li {
     position: absolute;
     top: 0;
     left: var(--sidebar-width);
-    width: 800px;
+    width: 700px;
     height: var(--banner-height);
     background-color: var(--white);
     box-shadow: var(--shadow-md);
