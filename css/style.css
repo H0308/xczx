@@ -308,11 +308,6 @@ ul, li {
     line-height: 1.5;
 }
 
-.course-item span {
-    font-size: 12px;
-    color: #999;
-}
-
 #continue-learning {
     display: block;
     width: 100%;
@@ -707,4 +702,62 @@ ul, li {
         height: 8px;
         margin: 0 3px;
     }
+}
+
+/* 导航菜单交互增强 */
+.nav a, .tab a, .interest li {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #00a4ff;
+    transition: all 0.3s ease;
+}
+
+.nav a.active::after, .nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* 兴趣标签点击效果 */
+.interest li:not(:nth-child(even)) {
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.interest li:not(:nth-child(even)):hover {
+    background-color: rgba(0, 164, 255, 0.1);
+}
+
+.interest li.active {
+    color: #00a4ff;
+    font-weight: bold;
+    background-color: rgba(0, 164, 255, 0.1);
+}
+
+/* 分类标签切换效果 */
+.tab a {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.tab a:hover {
+    color: #00a4ff;
+    background-color: rgba(0, 164, 255, 0.1);
+}
+
+.tab a.active {
+    color: #fff;
+    background-color: #00a4ff;
 }

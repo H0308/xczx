@@ -123,4 +123,53 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 初始调用一次，确保页面加载时也能正确高亮
     scrollSpy();
+    
+    // 1. 主导航高亮切换
+    const headerNavLinks = document.querySelectorAll('.header .nav a');
+    headerNavLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            // 移除所有导航项的active类
+            headerNavLinks.forEach(item => item.classList.remove('active'));
+            // 为当前点击项添加active类
+            this.classList.add('active');
+        });
+    });
+    
+    // 2. 兴趣标签高亮切换
+    const interestItems = document.querySelectorAll('.interest li:not(:nth-child(even))');
+    interestItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // 只有非分隔符的li元素才能点击高亮
+            if (!this.textContent.includes('|')) {
+                // 移除所有兴趣标签的active类
+                interestItems.forEach(li => li.classList.remove('active'));
+                // 为当前点击项添加active类
+                this.classList.add('active');
+            }
+        });
+    });
+    
+    // 3. 各分类模块的标签页高亮切换
+    const sectionTabs = document.querySelectorAll('.section-header .tab');
+    sectionTabs.forEach(tabGroup => {
+        const tabLinks = tabGroup.querySelectorAll('a');
+        tabLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // 在当前标签组内移除所有active类
+                tabLinks.forEach(item => item.classList.remove('active'));
+                // 为当前点击项添加active类
+                this.classList.add('active');
+                
+                // 可以在这里添加内容切换的逻辑
+                // 例如根据标签显示不同的课程列表
+                const category = this.textContent.trim(); // 获取标签文本
+                const parentSection = this.closest('[id]'); // 获取父级区域ID
+                
+                // 模拟切换内容 - 在实际项目中可以使用AJAX请求加载内容或显示/隐藏预加载内容
+                console.log(`在"${parentSection.id}"区域切换到"${category}"分类`);
+            });
+        });
+    });
 });
