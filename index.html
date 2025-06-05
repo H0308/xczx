@@ -32,14 +32,26 @@
         </div>
     </header>
 
+    <!-- 固定的左侧导航栏 -->
+    <div class="fixed-sidebar">
+        <ul>
+            <li><a href="#banner" class="active">顶部</a></li>
+            <li><a href="#recommend">精品推荐</a></li>
+            <li><a href="#programming">编程入门</a></li>
+            <li><a href="#data-analysis">数据分析</a></li>
+            <li><a href="#machine-learning">机器学习</a></li>
+            <li><a href="#frontend-development">前端开发</a></li>
+        </ul>
+    </div>
+
     <!-- 主要内容区域 -->
     <div class="main">
         <!-- 轮播图区域 -->
-        <div class="banner">
+        <div class="banner" id="banner">
             <div class="wrapper">
                 <div class="carousel">
                     <div class="slides">
-                        <img src="img/banner1.png" alt="banner1">
+                        <!-- 轮播图将通过JavaScript动态生成 -->
                     </div>
                     <div class="carousel-btns">
                         <span class="active"></span>
@@ -101,12 +113,12 @@
                 <div class="course-list">
                     <h3>我的课程</h3>
                     <div class="course-item">
-                        <img src="img/course1.png" alt="课程1">
+                        <img src="img/programming1.png" alt="课程1">
                         <p>Vue.js基础入门</p>
                         <span>继续学习</span>
                     </div>
                     <div class="course-item">
-                        <img src="img/course2.png" alt="课程2">
+                        <img src="img/data1.png" alt="课程2">
                         <p>Python数据分析</p>
                         <span>继续学习</span>
                     </div>
@@ -130,12 +142,18 @@
                         <li>数据分析</li>
                         <li>|</li>
                         <li>运维&测试</li>
+                        <li>|</li>
+                        <li>运维&测试</li>
+                        <li>|</li>
+                        <li>运维&测试</li>
+                        <li>|</li>
+                        <li>运维&测试</li>
                     </ul>
                     <a href="#" class="modify">修改兴趣</a>
                 </div>
 
                 <!-- 精品推荐模块 -->
-                <div class="recommend">
+                <div class="recommend" id="recommend">
                     <div class="section-header">
                         <h2>精品推荐</h2>
                         <a href="#" class="more">查看全部</a>
@@ -195,7 +213,7 @@
                 </div>
 
                 <!-- 编程入门模块 -->
-                <div class="programming">
+                <div class="programming" id="programming">
                     <div class="section-header">
                         <h2>编程入门</h2>
                         <div class="tab">
@@ -246,7 +264,7 @@
                 </div>
 
                 <!-- 数据分析师模块 -->
-                <div class="data-analysis">
+                <div class="data-analysis" id="data-analysis">
                     <div class="section-header">
                         <h2>数据分析师</h2>
                         <div class="tab">
@@ -292,6 +310,88 @@
                                     <p><span class="level">高级</span> · <span class="students">725人正在学习</span></p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 机器学习工程师模块 -->
+                <div class="machine-learning" id="machine-learning">
+                    <div class="section-header">
+                        <h2>机器学习工程师</h2>
+                        <div class="tab">
+                            <a href="#" class="active">热门</a>
+                            <a href="#">初级</a>
+                            <a href="#">中级</a>
+                            <a href="#">高级</a>
+                        </div>
+                        <a href="#" class="more">查看全部</a>
+                    </div>
+                    <div class="course-container">
+                        <div class="course-box">
+                            <img src="img/ml1.png" alt="机器学习课程1">
+                            <h4>Python机器学习入门</h4>
+                            <p><span class="level">初级</span> · <span class="students">1158人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/ml1.png" alt="机器学习课程2">
+                            <h4>深度学习框架TensorFlow</h4>
+                            <p><span class="level">高级</span> · <span class="students">892人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/ml1.png" alt="机器学习课程3">
+                            <h4>计算机视觉实战</h4>
+                            <p><span class="level">高级</span> · <span class="students">736人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/ml1.png" alt="机器学习课程4">
+                            <h4>自然语言处理NLP</h4>
+                            <p><span class="level">中级</span> · <span class="students">654人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/ml1.png" alt="机器学习课程5">
+                            <h4>PyTorch深度学习</h4>
+                            <p><span class="level">高级</span> · <span class="students">823人正在学习</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 前端开发工程师模块 -->
+                <div class="frontend-development" id="frontend-development">
+                    <div class="section-header">
+                        <h2>前端开发工程师</h2>
+                        <div class="tab">
+                            <a href="#" class="active">热门</a>
+                            <a href="#">初级</a>
+                            <a href="#">中级</a>
+                            <a href="#">高级</a>
+                        </div>
+                        <a href="#" class="more">查看全部</a>
+                    </div>
+                    <div class="course-container">
+                        <div class="course-box">
+                            <img src="img/frontend1.png" alt="前端课程1">
+                            <h4>Vue.js全家桶开发</h4>
+                            <p><span class="level">高级</span> · <span class="students">1425人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/frontend1.png" alt="前端课程2">
+                            <h4>React企业级开发</h4>
+                            <p><span class="level">高级</span> · <span class="students">1189人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/frontend1.png" alt="前端课程3">
+                            <h4>微信小程序开发</h4>
+                            <p><span class="level">中级</span> · <span class="students">956人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/frontend1.png" alt="前端课程4">
+                            <h4>Node.js后端开发</h4>
+                            <p><span class="level">高级</span> · <span class="students">785人正在学习</span></p>
+                        </div>
+                        <div class="course-box">
+                            <img src="img/frontend1.png" alt="前端课程5">
+                            <h4>TypeScript实战开发</h4>
+                            <p><span class="level">高级</span> · <span class="students">698人正在学习</span></p>
                         </div>
                     </div>
                 </div>
